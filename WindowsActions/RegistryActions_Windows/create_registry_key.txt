@@ -1,0 +1,6 @@
+::arguement:key
+@echo off
+set key=%1%
+reg add %key%
+::reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /f /v DisableTaskMgr /t REG_DWORD /d 1
+

@@ -1,0 +1,13 @@
+check_IP >>> Displays All the IP's allotted to the system.
+	usage : check_IP
+
+
+check_free_port >>> checks and dilplay if the port is open on local host or
+not. 
+	usage : check_free_port <port_number>
+		check_free_port 20
+
+check_ping.sh >> Checks if the mentioned device is pingable from the host or
+nit.
+	usage : check_ping.sh <target_to_be_checked>
+		check_ping.sh 192.168.8.100

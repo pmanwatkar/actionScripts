@@ -1,0 +1,1 @@
+sh snmpTrapV1.sh <community> <trapDestinationIP> <enterpriseOID> <trapSourceIP> <genericTrapID> <specificTrapID> <systemUpTime>

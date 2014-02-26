@@ -1,0 +1,12 @@
+#delete view:
+
+viewName=$1
+user=$2
+password=$3
+
+service mysqld start
+if [ -z $password ]
+echo "drop view $viewName;" | mysql -u $user
+else
+echo "drop view $viewName;" | mysql -u root -p $password
+fi

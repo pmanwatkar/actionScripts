@@ -1,0 +1,5 @@
+#!/bin/bash
+
+serviceName="'"$1"'"
+
+/usr/bin/svcs -l $serviceName

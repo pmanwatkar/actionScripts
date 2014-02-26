@@ -1,0 +1,13 @@
+#!/bin/bash
+
+nmap -p$1 localhost 2> /dev/null > temp 
+OUT=$?
+
+cat temp | grep "$1/" 2> /dev/null | cut -d' ' -f2 2> /dev/null
+
+rm temp
+if [ $OUT -ne 0 ];then
+
+        echo "Doesn't seems to be a legit port, Please recheck and retry." 
+fi
+

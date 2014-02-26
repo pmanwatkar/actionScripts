@@ -1,0 +1,9 @@
+#!/bin/bash
+username=$1
+password=$2
+dbname=$3
+
+if[-z $password]
+mysql -u $username -p $password -e ["show tables; "]
+else 
+mysql -u $username -e ["show tables; "]

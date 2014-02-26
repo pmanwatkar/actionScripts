@@ -1,0 +1,3 @@
+$folderOrRegistryPath = $args[0]
+
+Get-ChildItem $folderOrRegistryPath

@@ -1,0 +1,25 @@
+Add-PSSnapin -Name "VMWare.VimAutomation.Core"
+
+$server_name = $args[0]
+$username = $args[1]
+$password = $args[2]
+$spec = $args[3]
+$ipAddress = $args[4]
+$subnetMask = $args[5]
+$defaultGateway = $args[6]
+$dnsServer = $args[7]
+$specName = $args[3]
+$description = $args[4]
+$fullName = $args[5]
+$orgName = $args[6]
+$rootPassword = $args[8]
+$domainName = $args[9]
+$domainUser = $args[10]
+$domainPassword = $args[11]
+
+
+$vc = Connect-VIServer -Server $server_name -Protocol https -Username $username -Password $password
+
+New-OSCustomizationSpec -Name $specName -OSType Linux -Description "$description" -FullName $fullName -OrgName $orgName -NamingScheme Fixed -NamingPrefix "Computer" -AdminPassword $rootPassword -Domain $domainName -DomainUsername $domainUser -DomainPassword $domainPassword -Confirm:$false
+
+Disconnect-VIServer -Server $vc -Confirm:$false

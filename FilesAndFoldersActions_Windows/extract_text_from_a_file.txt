@@ -1,0 +1,4 @@
+@echo off
+set test=%1
+for /F "tokens=1" %%I in (%test%) do @set var=%%I
+@echo "%var%"

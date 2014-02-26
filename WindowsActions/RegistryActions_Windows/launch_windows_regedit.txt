@@ -1,0 +1,9 @@
+::arguements:path 
+@echo off
+
+reg query %1%
+::reg query HKLM\Software\Microsoft\VisualStudio\8.0
+
+
+
+

@@ -1,0 +1,16 @@
+Add-PSSnapin -Name "VMWare.VimAutomation.Core"
+
+$server_name = $args[0]
+$username = $args[1]
+$password = $args[2]
+$spec = $args[3]
+$ipAddress = $args[4]
+$subnetMask = $args[5]
+$defaultGateway = $args[6]
+$dnsServer = $args[7]
+
+$vc = Connect-VIServer -Server $server_name -Protocol https -Username $username -Password $password
+
+New-OSCustomizationNicMapping -Spec $spec -IpMode UseStaticIP -IPAddress $ipAddress -SubnetMask $subnetMask -DefaultGateway $defaultGateway -DnsServer $dnsServer -Confirm:$false
+
+Disconnect-VIServer -Server $vc -Confirm:$false

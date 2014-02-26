@@ -1,0 +1,15 @@
+#create view:
+
+viewName=$1
+db=$2
+table=$3
+user=$4
+password=$5
+
+service mysqld start
+
+if [ -z $password ]
+echo "create view $viewName as select* from $db.$table;" | mysql -u $user
+else
+echo "create view $viewName as select* from $db.$table;" | mysql -u $user -p $password
+fi

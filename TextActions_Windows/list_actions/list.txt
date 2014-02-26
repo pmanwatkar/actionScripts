@@ -1,0 +1,13 @@
+append_blank_line:arguements:filename
+
+append_text_to_a_file:arguements:filename,text
+
+APPEND_VARIABLE_TO_FILE:arguements:filename,variable
+
+find_string_in_a_file:arguements: string,filename
+
+find_string_in_a_file_and_log:arguements: string
+
+overwrite_a_file_with_blank_line:arguements:filename
+
+

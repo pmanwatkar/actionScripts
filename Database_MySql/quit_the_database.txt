@@ -1,0 +1,8 @@
+#!/bin/bash
+username=$1
+password=$2
+
+if[-z $password]
+mysql -u $username -p $password -e ["quit"]
+else 
+mysql -u $username -e ["quit"]

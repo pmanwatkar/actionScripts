@@ -1,0 +1,17 @@
+
+Add-PSSnapin -Name "VMWare.VimAutomation.Core"
+
+$server_name = $args[0]
+$username = $args[1]
+$password = $args[2]
+$vmName = $args[3]
+$vmUsername = $args[4]
+$vmPassword = $args[5]
+$vmSourcePath = $args[6]  # "c:\temp\tmp.txt"
+$localDstPath = $args[7]  # "c:\temp\"
+
+$vc = Connect-VIServer -Server $server_name -Protocol https -Username $username -Password $password
+
+Copy-VMGuestFile -Source $vmSourcePath -Destination $localDstPath -VM $vmName -GuestToLocal -HostUser $username -HostPassword $password -GuestUser $vmUsername -GuestPassword $vmPassword -Confirm:$false
+
+Disconnect-VIServer -Server $vc -Confirm:$false

@@ -1,0 +1,16 @@
+Add-PSSnapin -Name "VMWare.VimAutomation.Core"
+
+$server_name = $args[0]
+$username = $args[1]
+$password = $args[2]
+$vmHost = $args[3]
+$vmIPAddress = $args[4]
+$gateway = $args[5]
+
+$vc = Connect-VIServer -Server $server_name -Protocol https -Username $username -Password $password
+
+$host = Get-VMHost $vmIPAddress
+
+New-VMHostRoute -VMHost $vmHost -Destination $vmIPAddress -PrefixLength 32 -Gateway $gateway -Confirm:$false
+
+Disconnect-VIServer -Server $vc -Confirm:$false

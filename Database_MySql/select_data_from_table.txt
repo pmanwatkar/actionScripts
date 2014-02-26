@@ -1,0 +1,9 @@
+#!/bin/bash
+username=$1
+password=$2
+dbname=$3
+table=$4
+if[-z $password]
+mysql -u $username -p $password -e ["select * from $table;"]
+else 
+mysql -u $username -e ["select * from $table;"]

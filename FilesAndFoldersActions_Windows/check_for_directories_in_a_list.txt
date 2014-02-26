@@ -1,0 +1,4 @@
+@echo off
+set VAR=%1
+FOR %%i IN (%VAR%) DO IF EXIST %%~si\NUL ECHO It's a directory
+::if exist %1\* echo Directory

@@ -1,0 +1,14 @@
+::arguements:service name
+@echo off
+set service_name=%1%
+tasklist /FI "IMAGENAME eq %service_name%" /FO CSV > search.log
+::tasklist /FI "IMAGENAME eq notepad.exe" /FO CSV > search.log
+
+FOR /F %%A IN (search.log) DO IF %%~zA EQU 0 GOTO end
+
+start %service_name%
+
+:end
+
+del search.log
+

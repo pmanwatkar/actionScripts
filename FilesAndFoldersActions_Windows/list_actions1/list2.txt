@@ -1,0 +1,7 @@
+del_file_without_prompt:arguments:filename
+
+delete_empty_files:arguments:none
+
+rename_file_as_current_time:arguments:filename
+
+start_batch_file_minimized:arguments:filename

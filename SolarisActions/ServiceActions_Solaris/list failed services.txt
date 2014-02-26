@@ -1,0 +1,3 @@
+#!/bin/bash
+
+svcs -a |grep "disabled";svcs -a | grep "offline"

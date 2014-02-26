@@ -1,0 +1,15 @@
+#!/bin/bash -
+
+#Retrieve Ins talled RPM Package Name by RPM File
+
+#This action retrieves the RPM package name from an RPM file.
+
+#Note: This action supports only systems that support RPM packages.
+
+p=$1
+if [ "$p" == "" ]; then
+	echo "Usage : check_rpm_by_file <file_to_be_quried>"
+else
+	rpm -qf "$1"
+fi
+exit 0

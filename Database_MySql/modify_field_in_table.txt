@@ -1,0 +1,13 @@
+#!/bin/bash
+username=$1
+password=$2
+dbname=$3
+table=$4
+field1=$5
+value1=$6
+field2=$7
+value2=$8
+if[-z $password]
+mysql -u $username -p $password -e ["use $dbname;update $table set $field2='$value2' where $field1=$value1;"]
+else 
+mysql -u $username -e ["use $dbname;update $table set $field2='$value2' where $field1=$value1;"]
