@@ -1,0 +1,14 @@
+#delete user:
+
+deleteUser=$1
+rootUser=$2
+password=$3
+
+drop user user_name;
+
+service mysqld start
+if [ -z $password ]
+echo "drop user $deleteUser;" | mysql -u $user
+else
+echo "drop user $deleteUser;" | mysql -u root -p $password
+fi

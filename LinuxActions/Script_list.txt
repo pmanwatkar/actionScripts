@@ -1,0 +1,15 @@
+RPM_check >>> Search for the mentioned package in the installed packages.
+	Usage : RPM_check <name of the package>
+
+check_root_group >> checks wether the mentioned user is a member of Root group
+or not.
+	Usage : check_root_user <username>
+
+check_rpm_by_file >>> Retrieves the RM name that provides the mentioned file.
+	Usage : check_rpm_by_file <Path_to_package/File>
+
+rpm_install >>> installs an RPM
+	usage : rpm_install <path_to_RPM>
+
+rpm_uninstall >>> Uninstalls an RPM
+	usage : rpm_uninstall <name of the package>

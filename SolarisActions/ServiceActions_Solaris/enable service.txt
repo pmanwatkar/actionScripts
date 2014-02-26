@@ -1,0 +1,5 @@
+#!/bin/bash
+
+serviceName="'"$1"'"
+
+/usr/sbin/svcadm enable $serviceName

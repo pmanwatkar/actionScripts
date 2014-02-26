@@ -1,0 +1,30 @@
+
+file_change_status.bat:arguements:file_name
+
+check_service_exists.bat:arguements:service_name
+
+add_registry_key.bat::arguements:registry key
+
+windows_update_check.bat::arguements:registry key
+
+service_names.bat:::arguments:none
+
+restart.bat:::arguments:none
+
+registry_key_data.bat::arguements:registry key
+
+process_running_status.bat::arguements:service name
+
+list_enviornment_variables.bat::arguements:none
+
+list_all_running_process.bat::arguements:none
+
+launch_windows_regedit.bat:::arguements:path 
+
+delete_registry_key.bat::arguements:key
+
+create_registry_key.bat::arguements:key
+
+enable_task_manager.bat::arguements:none
+
+exit_command_windows.bat::arguements:none

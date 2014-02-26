@@ -1,0 +1,16 @@
+Add text After this Text:
+
+sh addAfterThisText.sh <filePath> <textToAdd> <afterThisText>
+
+
+
+
+Add Text First:
+
+sh addTextFirst.sh <filePath> <textAppendAtStart> 
+
+
+
+Add Text Last:
+
+sh addTextLast.sh <filePath> <textToAdd>

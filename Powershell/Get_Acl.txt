@@ -1,0 +1,3 @@
+$location = $args[0]
+
+Get-Acl $location

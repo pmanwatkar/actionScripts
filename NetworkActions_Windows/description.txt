@@ -1,0 +1,24 @@
+check_port.bat >>> checks is the port is open or closed.
+	SYNTAX 	: Check_Port <Port_To_Be_Checked>
+        Eg 	: check_port 80
+
+
+connect_network_drive.bat >> Connects a network drive. 
+	SYNTAX 	: Connect_Network_Drive <Path_To_Be_Connected>
+<Drive_Name>
+        Eg 	: connect_network_drive \\127.0.0.1\test z:"
+
+
+disconnect_network_drive.bat >>> Disconnects the Network drive.
+	SYNTAX 	: Disconnect_Network_Drive
+<Drive_To_Be_Disconnected>"
+        Eg 	: disconnect_network_drive z:
+
+
+find_ip.bat >>> Find IP's allotted to the system
+	SYNTAX	: find_IP.bat
+
+ping_device.bat >>> checks is the device is pingable from local system or not. 
+	SYNTAX 	: Ping_Device.bat <Device_To_Be_Pingged>
+        Eg 	: ping_device.bat 192.168.1.1
+

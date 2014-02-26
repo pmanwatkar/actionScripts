@@ -1,0 +1,11 @@
+#!/bin/bash
+username=$1
+password=$2
+dbname=$3
+table=$4
+field=$5
+value=$6
+if[-z $password]
+mysql -u $username -p $password -e ["use $dbname;delete from $table where $field=$value;"]
+else 
+mysql -u $username -e ["use $dbname;delete from $table where $field=$value;"]

@@ -1,0 +1,3 @@
+@echo off
+for /f %%i in ('find /v /c "" ^< test.txt') do set /a lines=%%i
+echo %lines%

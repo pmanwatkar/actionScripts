@@ -1,0 +1,4 @@
+::arguements:none
+@echo off
+tasklist
+pause

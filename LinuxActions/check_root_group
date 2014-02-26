@@ -1,0 +1,15 @@
+#!/bin/bash 
+
+VAL=`cat /etc/passwd| grep -e ^$1`
+
+if [ "$VAL" == "" ];then
+	echo "user does not exist"
+else 
+	VAL1=`id $1 | grep -e "gid=0(root)\|groups.*0(root).*"`
+
+	if [ "$VAL1" == "" ]; then
+		echo "user is not a member of ROOT group."
+	else 
+		echo "user is a member of ROOT group."
+	fi
+fi

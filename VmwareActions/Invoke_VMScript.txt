@@ -1,0 +1,15 @@
+Add-PSSnapin -Name "VMWare.VimAutomation.Core"
+
+$server_name = $args[0]
+$username = $args[1]
+$password = $args[2]
+$vmName = $args[3]
+$vmUser = $args[4]
+$vmPassword = $args[5]
+$script = $args[6]
+
+$vc = Connect-VIServer -Server $server_name -Protocol https -Username $username -Password $password
+
+Invoke-VMScript -VM $vmName -ScriptText "$script" -GuestUser $vmUser -GuestPassword $vmPassword -Confirm:$false
+
+Disconnect-VIServer -Server $vc -Confirm:$false

@@ -1,0 +1,29 @@
+SVN Checkout:
+
+sh svnCheckOut.sh <pathWhereToDownload> <svnRepoPath> <usernameRepo> <password>
+
+
+
+
+SVN Commit:
+
+sh svnCommit.sh <pathOfProject> <message>
+
+
+
+SVN Export:
+
+sh svnExport.sh <pathWhereToDownload> <svnRepoPath> <usernameRepo> <password>
+
+
+
+
+SVN Import:
+
+sh svnImport.sh <sourceProjectPath> <repoProjectPath> <message>
+
+
+
+SVN Update:
+
+sh svnUpdate.sh <pathOfProject> <revision>

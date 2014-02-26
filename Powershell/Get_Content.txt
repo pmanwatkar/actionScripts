@@ -1,0 +1,3 @@
+$filePath = $args[0]
+
+Get-Content $filePath

@@ -1,0 +1,13 @@
+
+::arguements:registry key
+@echo off
+set key=%1%
+REG QUERY %key% /v HideFileExt /t REG_DWORD 
+::REG QUERY HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD 
+if errorlevel 1 (
+    echo Num 1
+) else (
+    echo Num 2
+)
+
+

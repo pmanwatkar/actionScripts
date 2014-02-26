@@ -1,0 +1,21 @@
+Add-PSSnapin -Name "VMWare.VimAutomation.Core"
+
+$server_name = $args[0]
+$username = $args[1]
+$password = $args[2]
+$vmName = $args[3]
+$folder1Name = $args[4]
+$folder2Name = $args[5]
+
+
+$vc = Connect-VIServer -Server $server_name -Protocol https -Username $username -Password $password
+
+$root = Get-Folder -NoRecursion
+
+$folder1 = New-Folder -Name $folder1Name -Location $root
+
+$folder2 = New-Folder -Name $folder2Name -Location $root
+
+Move-Folder -Folder $folder2 -Destination $folder1 -Confirm:$false
+
+Disconnect-VIServer -Server $vc -Confirm:$false

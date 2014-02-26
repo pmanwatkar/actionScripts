@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+STR=`rpm -qa | grep $1`
+
+if [ "$STR" != "" ]; then 
+	STR=`echo $STR |sed s:' ':'\n': `
+	echo -e "The below packages were found matching \"$1\": \n"
+	echo -e "$STR"
+
+else 
+	echo "No package matching \"$1\" was found";
+fi
